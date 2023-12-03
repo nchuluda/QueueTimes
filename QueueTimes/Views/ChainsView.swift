@@ -8,20 +8,26 @@
 import SwiftUI
 
 struct ChainsView: View {
-    @StateObject var chainsVM = ChainViewModel()
+    @StateObject var chainStore = ChainStore()
     
     var body: some View {
-        NavigationView {
-            List(chainsVM.chainsArray, id: \.self) { chain in
-                NavigationLink(chain.name, destination: ParksView(parks: chain.parks))
+        VStack {
+            NavigationView {
+                List(chainStore.chains, id: \.self) { chain in
+                    NavigationLink(chain.name, destination: ParksView(parks: chain.parks))
+                }
+                .listStyle(.plain)
+                .navigationTitle("Queue-Times")
+                .refreshable {
+                    await chainStore.refresh()
+                }
             }
-            .listStyle(.plain)
-            .navigationTitle("Queue-Times")
+            .task {
+                await chainStore.refresh()
+            }
+            
+        .environmentObject(chainStore)
         }
-        .task {
-            await chainsVM.getData()
-        }
-        .environmentObject(chainsVM)
     }
 }
     

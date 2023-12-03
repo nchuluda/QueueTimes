@@ -8,11 +8,15 @@
 import SwiftUI
 
 struct ParksView: View {
-    @EnvironmentObject var chainsVM: ChainViewModel
+//    @EnvironmentObject var chainsVM: ChainViewModel
+    @EnvironmentObject var chainStore: ChainStore
+
     var parks: [Park]
     var body: some View {
             List(parks, id: \.self) { park in
+//                NavigationLink("\(park.name)", destination: RidesView(parkId: park.id, parkName: park.name))
                 NavigationLink("\(park.name)", destination: RidesView(parkId: park.id, parkName: park.name))
+
 //                Text(String(park.id))
             }
             .navigationTitle("Parks")
@@ -27,6 +31,7 @@ var previewParks = [canadasWonderland]
 
 struct ParksView_Previews: PreviewProvider {
     static var previews: some View {
-        ParksView(parks: previewParks).environmentObject(ChainViewModel())
+//        ParksView(parks: previewParks).environmentObject(ChainViewModel())
+        ParksView(parks: previewParks).environmentObject(ChainStore())
     }
 }

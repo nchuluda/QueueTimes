@@ -19,8 +19,12 @@
 		D80BD7032ADDCA4E00C13CAA /* RideViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D80BD7022ADDCA4E00C13CAA /* RideViewModel.swift */; };
 		D80BD7072ADDCF8300C13CAA /* Land.swift in Sources */ = {isa = PBXBuildFile; fileRef = D80BD7062ADDCF8300C13CAA /* Land.swift */; };
 		D80BD7092ADDCFA600C13CAA /* Ride.swift in Sources */ = {isa = PBXBuildFile; fileRef = D80BD7082ADDCFA600C13CAA /* Ride.swift */; };
-		D80BD70D2ADDD53700C13CAA /* RidesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D80BD70C2ADDD53700C13CAA /* RidesView.swift */; };
+		D80BD70D2ADDD53700C13CAA /* RideView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D80BD70C2ADDD53700C13CAA /* RideView.swift */; };
+		D88521BE2B16BD5B002117F3 /* ChainStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = D88521BD2B16BD5B002117F3 /* ChainStore.swift */; };
+		D893FFFE2B1C144D005395F2 /* RideStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = D893FFFD2B1C144D005395F2 /* RideStore.swift */; };
 		D8A7A2E02ADF782500D25EE7 /* Coasters.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8A7A2DF2ADF782500D25EE7 /* Coasters.swift */; };
+		D8C2F0CE2B1CD8C20029DAAC /* RidesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8C2F0CD2B1CD8C20029DAAC /* RidesView.swift */; };
+		D8C2F0D12B1D00F70029DAAC /* Top.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8C2F0D02B1D00F70029DAAC /* Top.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,8 +41,12 @@
 		D80BD7022ADDCA4E00C13CAA /* RideViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RideViewModel.swift; sourceTree = "<group>"; };
 		D80BD7062ADDCF8300C13CAA /* Land.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Land.swift; sourceTree = "<group>"; };
 		D80BD7082ADDCFA600C13CAA /* Ride.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ride.swift; sourceTree = "<group>"; };
-		D80BD70C2ADDD53700C13CAA /* RidesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RidesView.swift; sourceTree = "<group>"; };
+		D80BD70C2ADDD53700C13CAA /* RideView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RideView.swift; sourceTree = "<group>"; };
+		D88521BD2B16BD5B002117F3 /* ChainStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChainStore.swift; sourceTree = "<group>"; };
+		D893FFFD2B1C144D005395F2 /* RideStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RideStore.swift; sourceTree = "<group>"; };
 		D8A7A2DF2ADF782500D25EE7 /* Coasters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coasters.swift; sourceTree = "<group>"; };
+		D8C2F0CD2B1CD8C20029DAAC /* RidesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RidesView.swift; sourceTree = "<group>"; };
+		D8C2F0D02B1D00F70029DAAC /* Top.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Top.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +79,7 @@
 		D80BD6E32ADC9AF200C13CAA /* QueueTimes */ = {
 			isa = PBXGroup;
 			children = (
+				D8C2F0CF2B1CFB240029DAAC /* Old */,
 				D80BD7012ADDBE0D00C13CAA /* Views */,
 				D80BD7002ADDBE0100C13CAA /* Models */,
 				D80BD6E42ADC9AF200C13CAA /* QueueTimesApp.swift */,
@@ -92,12 +101,13 @@
 		D80BD7002ADDBE0100C13CAA /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				D80BD6FA2ADD5EEC00C13CAA /* ChainViewModel.swift */,
-				D80BD7022ADDCA4E00C13CAA /* RideViewModel.swift */,
+				D88521BD2B16BD5B002117F3 /* ChainStore.swift */,
+				D893FFFD2B1C144D005395F2 /* RideStore.swift */,
 				D80BD6F62ADCB61B00C13CAA /* Chain.swift */,
 				D80BD6F82ADCB62F00C13CAA /* Park.swift */,
 				D80BD7062ADDCF8300C13CAA /* Land.swift */,
 				D80BD7082ADDCFA600C13CAA /* Ride.swift */,
+				D8C2F0D02B1D00F70029DAAC /* Top.swift */,
 				D8A7A2DF2ADF782500D25EE7 /* Coasters.swift */,
 			);
 			path = Models;
@@ -108,9 +118,19 @@
 			children = (
 				D80BD6FE2ADDBDE700C13CAA /* ChainsView.swift */,
 				D80BD6FC2ADDB11900C13CAA /* ParksView.swift */,
-				D80BD70C2ADDD53700C13CAA /* RidesView.swift */,
+				D8C2F0CD2B1CD8C20029DAAC /* RidesView.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		D8C2F0CF2B1CFB240029DAAC /* Old */ = {
+			isa = PBXGroup;
+			children = (
+				D80BD70C2ADDD53700C13CAA /* RideView.swift */,
+				D80BD6FA2ADD5EEC00C13CAA /* ChainViewModel.swift */,
+				D80BD7022ADDCA4E00C13CAA /* RideViewModel.swift */,
+			);
+			path = Old;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -183,17 +203,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D8C2F0CE2B1CD8C20029DAAC /* RidesView.swift in Sources */,
 				D80BD7072ADDCF8300C13CAA /* Land.swift in Sources */,
 				D8A7A2E02ADF782500D25EE7 /* Coasters.swift in Sources */,
 				D80BD7032ADDCA4E00C13CAA /* RideViewModel.swift in Sources */,
 				D80BD6FB2ADD5EEC00C13CAA /* ChainViewModel.swift in Sources */,
 				D80BD6F72ADCB61B00C13CAA /* Chain.swift in Sources */,
 				D80BD6FD2ADDB11900C13CAA /* ParksView.swift in Sources */,
+				D8C2F0D12B1D00F70029DAAC /* Top.swift in Sources */,
 				D80BD7092ADDCFA600C13CAA /* Ride.swift in Sources */,
+				D893FFFE2B1C144D005395F2 /* RideStore.swift in Sources */,
 				D80BD6F92ADCB62F00C13CAA /* Park.swift in Sources */,
-				D80BD70D2ADDD53700C13CAA /* RidesView.swift in Sources */,
+				D80BD70D2ADDD53700C13CAA /* RideView.swift in Sources */,
 				D80BD6FF2ADDBDE700C13CAA /* ChainsView.swift in Sources */,
 				D80BD6E72ADC9AF200C13CAA /* ContentView.swift in Sources */,
+				D88521BE2B16BD5B002117F3 /* ChainStore.swift in Sources */,
 				D80BD6E52ADC9AF200C13CAA /* QueueTimesApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

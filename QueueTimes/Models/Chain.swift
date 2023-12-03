@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Chain: Decodable, Hashable {
+struct Chain: Codable, Hashable {
     let id: Int
     let name: String
     let parks: [Park]

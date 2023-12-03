@@ -7,13 +7,8 @@
 
 import Foundation
 
-struct Top: Decodable {
-    let lands: [Land]
-    let rides: [Ride]
-}
-
-struct Land: Decodable, Hashable, Identifiable {
+struct Land: Codable, Hashable, Identifiable {
     let id: Int
     let name: String
-    let rides: [Ride]
+    var rides: [Ride]
 }

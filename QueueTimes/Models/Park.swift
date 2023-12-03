@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Park: Decodable, Hashable {
+struct Park: Codable, Hashable {
     let id: Int
     let name, country, latitude, longitude: String
 }
